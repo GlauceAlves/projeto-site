@@ -7,6 +7,7 @@
 
 body {
     background-color: aqua;
+    height: 100vw;
 }
 
 main {
@@ -18,11 +19,11 @@ main {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.397);
     display: flex;
     align-items: flex-start;
-    flex-flow: row nowrap; /* use nowrap para evitar quebra de linha */
+    flex-flow: row wrap; /* use nowrap para evitar quebra de linha */
 }
 
 img {
-    width: 300px;
+    width: 50%;
     margin-right: 10px;
     height: auto; /* ajuste a altura conforme necessário */
 }
@@ -30,8 +31,19 @@ img {
 article {
     color: brown;
     flex: 1; /* para que o article ocupe o espaço restante */
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    flex-direction: column; /* alinha os elementos em coluna, caso haja mais elementos */
 }
 
+article > img{
+    width: 70%;
+    height: 30%;
+    border-radius: 50%;
+    margin: 20px;
+   
+}
 
 h1 {
     background-color: rgba(240, 110, 17, 0.918);
@@ -47,10 +59,12 @@ h1 {
 h2 {
     font-size: 1.5rem;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.397);
+    text-align: center;
 }
 
 p{
-    margin: 10px;
+    padding: 10px;
+    text-align: justify;
 }
 
 a {
